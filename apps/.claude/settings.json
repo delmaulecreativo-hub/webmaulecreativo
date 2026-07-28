@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"atlas-sonoro: %{http_code}\\\\n\" http://localhost:3000/museo/atlas-sonoro)",
+      "Bash(ffmpeg -y -i '~/Downloads/Eucaliptus sonoro.mp3' -codec:a libmp3lame -b:a 160k -ac 2 '/Users/familiarivelle/Downloads/horizons-export-2045a35b-1cc4-483b-922c-a6f0afea8b6b \\(1\\)/apps/web/public/raices/audio/raices-naturales-de-curepto.mp3')",
+      "Bash(curl -s -o /dev/null -w \"audio-raices: %{http_code}\\\\n\" http://localhost:3000/raices/audio/raices-naturales-de-curepto.mp3)",
+      "Bash(curl -s -o /dev/null -w \"audio-tr: %{http_code}\\\\n\" http://localhost:3000/territorios-resonantes/audio/estacion-de-escucha.mp3)"
+    ]
+  }
+}

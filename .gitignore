@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Build
+dist/
+**/dist/
+
+# Variables de entorno y secretos
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Datos de PocketBase (nunca subir: contiene la base de datos y archivos subidos)
+apps/pocketbase/pb_data/
+apps/pocketbase/pb_data_backup_original/
+
+# Binarios de PocketBase (se descargan según el sistema operativo)
+apps/pocketbase/pocketbase
+apps/pocketbase/pocketbase_linux_backup
+
+# Archivos del sistema
+.DS_Store
+**/.DS_Store
+
+# Exportaciones y comprimidos temporales
+*.zip
+app.tar.gz
+
+# Logs
+*.log
+npm-debug.log*

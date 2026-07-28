@@ -1,0 +1,120 @@
+/*
+  Maule Creativo — Laboratorio de Ingeniería Creativa
+  Immersive territorial-lab theme.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  overflow-x: clip;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+@layer base {
+  :root {
+    /* Deep territorial ink, warm river-amber, cold estuary teal */
+    --background: 190 30% 6%;
+    --foreground: 40 30% 92%;
+    --card: 190 28% 9%;
+    --card-foreground: 40 30% 92%;
+    --popover: 190 32% 7%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 32 80% 58%;
+    --primary-foreground: 190 40% 8%;
+    --secondary: 178 40% 40%;
+    --secondary-foreground: 190 40% 8%;
+    --muted: 190 18% 16%;
+    --muted-foreground: 40 12% 62%;
+    --accent: 178 45% 45%;
+    --accent-foreground: 190 40% 8%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 190 20% 18%;
+    --input: 190 20% 18%;
+    --ring: 32 80% 58%;
+    --radius: 0.25rem;
+
+    --amber: 32 80% 58%;
+    --teal: 178 45% 45%;
+    --sand: 40 40% 80%;
+    --forest: 150 30% 52%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+}
+
+.font-display {
+  font-family: "Fraunces", serif;
+}
+.font-mono {
+  font-family: "Space Mono", monospace;
+}
+
+/* Editorial line under a phrase */
+.marker-underline {
+  background-image: linear-gradient(120deg, hsl(var(--amber) / 0.35), hsl(var(--amber) / 0.35));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 0.35em;
+}
+
+/* Film grain overlay */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.text-balance { text-wrap: balance; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--muted)); border-radius: 999px; }
+
+@keyframes slow-pan {
+  0% { transform: scale(1.08) translate3d(0, 0, 0); }
+  100% { transform: scale(1.15) translate3d(-1.5%, -1.5%, 0); }
+}
+.animate-slow-pan { animation: slow-pan 24s ease-in-out infinite alternate; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 32s linear infinite; }
+
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.7; }
+  70%, 100% { transform: scale(2.6); opacity: 0; }
+}
+.animate-ping-slow { animation: ping-slow 3s cubic-bezier(0,0,0.2,1) infinite; }
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-orbit { animation: orbit-spin 60s linear infinite; }
+.animate-orbit-rev { animation: orbit-spin 60s linear infinite reverse; }
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -24; }
+}
+.animate-dash { animation: dash-flow 1.2s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-slow-pan, .animate-marquee, .animate-ping-slow,
+  .animate-orbit, .animate-orbit-rev, .animate-dash { animation: none; }
+}
