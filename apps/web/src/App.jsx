@@ -11,6 +11,7 @@ import RaicesDelMaulePage from './pages/RaicesDelMaulePage';
 import TerritoriosResonantesProyectoPage from './pages/TerritoriosResonantesProyectoPage';
 import MemoriasDeLicantenPage from './pages/MemoriasDeLicantenPage';
 import AtlasSonoroPage from './pages/AtlasSonoroPage';
+import LlongocuraPage from './pages/LlongocuraPage';
 import CCRPage from './pages/CCRPage';
 import CCRAuroritaReportajePage from './pages/CCRAuroritaReportajePage';
 import ColaboraPage from './pages/ColaboraPage';
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/territorios-resonantes" element={<TerritoriosResonantesProyectoPage />} />
                 <Route path="/memorias-de-licanten" element={<MemoriasDeLicantenPage />} />
                 <Route path="/museo/atlas-sonoro" element={<AtlasSonoroPage />} />
+                <Route path="/llongocura" element={<LlongocuraPage />} />
                 <Route path="/ccr" element={<CCRPage />} />
                 <Route path="/ccr/trabajos-previos/aurorita-ramos-taller-adulto-mayor" element={<CCRAuroritaReportajePage />} />
                 <Route path="/colabora" element={<ColaboraPage />} />
