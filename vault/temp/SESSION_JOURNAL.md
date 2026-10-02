@@ -1402,3 +1402,11 @@
 - url: http://localhost:3000/experiencias
 - title: Laboratorio de Ingeniería Creativa Tecnológica — Maule Creativo
 
+## 2026-10-02 03:22:47.020Z load
+- url: http://localhost:3111/llongocura
+- title: Laboratorio de Ingeniería Creativa Tecnológica — Maule Creativo
+
+## 2026-10-02 03:22:47.715Z navigate
+- url: http://localhost:3111/llongocura
+- via: replaceState
+
